@@ -76,6 +76,12 @@ def test():
         'hijkl'
     ])
 
+    assert 'fghij\nhiabcde' == concat([
+        'abcde',
+        'fghij',
+        'hiabc'
+    ])
+
     assert 'abcdefghi' == concat([
         'abcde',
         'cdefg',
