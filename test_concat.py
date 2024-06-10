@@ -58,38 +58,47 @@ def concat(strs):
 
 
 def test():
-    # strs = [
-    #     'abcde',
-    #     'cdefg',
-    #     '123ab'
-    # ]
+    assert 'abcde\nfghij\nklmno' == concat([
+        'abcde',
+        'fghij',
+        'klmno'
+    ])
 
-    # strs = [
-    #     'abcde',
-    #     'abcde',
-    #     'cdefgab'
-    # ]
+    assert 'abcdefg\nkkkkk' == concat([
+        'abcde',
+        'cdefg',
+        'kkkkk'
+    ])
 
-    # strs = [
-    #     'abcde',
-    #     'cdefg',
-    #     'efghi'
-    # ]
+    assert 'abcde\nfghijkl' == concat([
+        'abcde',
+        'fghij',
+        'hijkl'
+    ])
 
-    # strs = [
-    #     'abcde',
-    #     'cdefg',
-    #     'kkkkk'
-    # ]
+    assert 'abcdefghi' == concat([
+        'abcde',
+        'cdefg',
+        'efghi'
+    ])
 
-    strs = [
+    assert '123abcdefg' == concat([
+        'abcde',
+        'cdefg',
+        '123ab'
+    ])
+
+    assert 'abcdefgab' == concat([
+        'abcde',
+        'abcde',
+        'cdefgab'
+    ])
+
+    assert 'abcdefghab' == concat([
         'abcde',
         'cdefg',
         'efghab'
-    ]
-
-    result = concat(strs)
-    print(result)
+    ])
 
 
 if __name__ == '__main__':
